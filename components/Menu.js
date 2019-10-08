@@ -1,5 +1,20 @@
 import React from "react";
 import Link from 'next/link';
+const items = [{
+  href: "/",
+  text: "Main page",
+},
+{
+  href: "/contacts",
+  text: "Contacts",
+},
+  {
+  href: "/about",
+  text: "About",
+},
+]
+
+
 
 function Menu(props) {
     return (
@@ -7,12 +22,15 @@ function Menu(props) {
       className="menu"
       >
 <ul>
-<li><Link href="/">
-            <a>Main page</a>
+{
+  items.map (item =>
+     (
+      <li><Link href={item.href}>
+            <a>{item.text}</a>
           </Link></li>
-<li><Link href="/contacts">
-            <a>Contacts</a>
-          </Link></li>
+          )
+  )
+}
 </ul>
     </div>
     );

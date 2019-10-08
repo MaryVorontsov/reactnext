@@ -156,60 +156,51 @@ var _jsxFileName = "C:\\Users\\maryb\\soshace\\projects\\reactnext\\components\\
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+const items = [{
+  href: "/",
+  text: "Main page"
+}, {
+  href: "/contacts",
+  text: "Contacts"
+}, {
+  href: "/about",
+  text: "About"
+}];
 
 function Menu(props) {
   return __jsx("div", {
     className: "menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 21
     },
     __self: this
   }, __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 24
     },
     __self: this
-  }, __jsx("li", {
+  }, items.map(item => __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 28
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
+    href: item.href,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 28
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 29
     },
     __self: this
-  }, "Main page"))), __jsx("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/contacts",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, "Contacts")))));
+  }, item.text))))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
